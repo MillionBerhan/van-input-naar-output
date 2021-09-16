@@ -1,21 +1,16 @@
 print("Welkom bij Pizzeria Berhano!")
-print("Wat mag het worden?")
-small = 1
-Medium = 2
-Large = 3
-size = int(input("press 1 for small, 2 for medium and 3 for large"))
-any = int(input("Hoeveel pizza's wilt u?"))
-if any <= 5 and size == 1:
-    print("u heeft",any,"pizza small besteld, dat wordt dan",3.99 * any)
-
-if any <= 5 and size == 2:
-    print("u heeft",any,"pizza medium besteld, dat wordt dan",4.99 * any)
-
-if any <= 5 and size == 3:
-    print("u heeft",any,"pizza large besteld, dat wordt dan",5.99 * any)
-
-if any > 5 or size > 3:
-    print(" Dat nummer/grootte herkennen wij niet") 
+print("Wat wilt u bestellen?") 
+priceSM= 3.99
+priceME= 4.99
+priceLA= 5.99
+aantalsmall = int(input("how many small pizza's do you want?"))
+aantalmedium = int(input("how many medium pizza's do you want?"))
+aantalLarge = int(input("how many large pizza's do you want?"))
+total = aantalsmall * priceSM + aantalmedium * priceME + aantalLarge * priceLA
+print (f"you chose {aantalsmall}, small will cost you {priceSM * aantalsmall}")
+print (f"you chose {aantalmedium}, medium will cost you {priceME * aantalmedium}") 
+print (f"you chose {aantalLarge},large will cost you {priceLA * aantalLarge} ")
+print (total)
 print ("Bedankt voor de bestelling namens Milliono Berhano, wensen wij u een fijne dag toe!")
 print ("Heeft u nog vragen neem dan gerust contact op met ons op!")
 print ("Contact&Service:")
